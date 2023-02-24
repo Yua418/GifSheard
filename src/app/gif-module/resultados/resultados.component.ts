@@ -1,3 +1,4 @@
+import { GifService } from 'src/app/gif-module/services/gif-service.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ResultadosComponent {
 
+  get resultados() {
+    return this.gifService.resultado;
+  }
+
+  constructor( private gifService:GifService ) {}
 }
