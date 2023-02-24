@@ -5,7 +5,8 @@
     <a
       href="#"
       class="list-group-item list-group-item-action my-1 text-truncate"
-      *ngFor="let item of history">
+      *ngFor="let item of history"
+      (click)="buscar(item)">
       {{item | titlecase}}
     </a>
   </div>

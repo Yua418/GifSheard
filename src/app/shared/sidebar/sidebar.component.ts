@@ -11,7 +11,14 @@ export class SidebarComponent {
   get history() {
     return this.gifService.history;
   }
+  
 
   constructor(private gifService:GifService) {}
 
+  buscar(item:string) {
+    if( item.trim().length === 0) {
+      return;
+    }
+    this.gifService.buscarGif( item );
+  }
 }
